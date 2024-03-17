@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Navbar from './Navbar';
 import Hero from './Hero';
+import Footer from './Footer';
 
 function App() {
   var [a,b]=useState(69);
@@ -8,6 +9,7 @@ function App() {
     <div>
     <Navbar />
     <Hero />
+    <Footer />
   </div>
   )
 }
