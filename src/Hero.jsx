@@ -1,4 +1,4 @@
-import React from "react";
+import CustomSelect from "./CustomSelect";
 
 const Hero = () => {
   return (
@@ -20,15 +20,7 @@ const Hero = () => {
                 </h1>
                 <form action="" className="w-full mt-12">
   <div className="relative flex items-center p-1 rounded-full bg-white border border-yellow-50 shadow-md md:p-2">
-    <select
-      className="hidden appearance-none bg-transparent border-none md:block px-4 py-3 rounded-full"
-      name="domain"
-      id="domain"
-    >
-      <option value="hotels">Hotels</option>
-      <option value="restaurant">Restaurant</option>
-      <option value="resort">Resort</option>
-    </select>
+    <CustomSelect/>
     <input
       placeholder="Your favorite services"
       className="w-full p-4 pl-10 pr-16 rounded-full focus:outline-none"
