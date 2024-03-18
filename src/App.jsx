@@ -5,18 +5,18 @@ import Hero from './Hero';
 import Footer from './Footer';
 import SignUp from './SignUp';
 import LoginWithGoogleButton from './Login';
+import UserProfile from './user_profile';
 
 function App() {
   return (
     <Router>
       <div>
-        <Navbar />
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/signup" element={<SignUp />} />
-          <Route path="login" element={<LoginWithGoogleButton />} />
+          <Route path="/login" element={<LoginWithGoogleButton />} />
+          <Route path="/user_profile" element={<UserProfile />} />
         </Routes>
-        <Footer />
       </div>
     </Router>
   );

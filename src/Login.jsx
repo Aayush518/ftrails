@@ -1,10 +1,14 @@
 import React from "react";
 import {Link} from "react-router-dom";
 import backgroundImg from "./assets/photos/1.jpg"; // Import the local image
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 
 const LoginWithGoogleButton = () => {
   return (
+    <>
+    <Navbar />
     <div className="flex items-center justify-center h-screen w-full px-5 sm:px-0">
       <div className="flex bg-white rounded-lg shadow-lg border overflow-hidden max-w-sm lg:max-w-4xl w-full">
         <div
@@ -90,6 +94,8 @@ const LoginWithGoogleButton = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 export default LoginWithGoogleButton;

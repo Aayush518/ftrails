@@ -1,7 +1,11 @@
 import CustomSelect from "./CustomSelect";
+import Footer from "./Footer";
+import Navbar from "./Navbar";
 
 const Hero = () => {
   return (
+<>
+<Navbar/>
     <div className="hero">
       <div className="relative w-full bg-white">
         <div className="container m-auto px-2 md:px-12 lg:px-7">
@@ -70,6 +74,8 @@ const Hero = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 

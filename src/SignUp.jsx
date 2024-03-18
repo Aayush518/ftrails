@@ -1,8 +1,12 @@
 import React from "react";
 import backgroundImg from "./assets/photos/1.jpg"; // Import the local image
 import { Link } from 'react-router-dom';
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 const RegistartionForm = () => {
   return (
+    <>
+    <Navbar />
     <div className="h-[100vh] items-center flex justify-center px-5 lg:px-0">
       <div className="max-w-screen-xl bg-white border shadow sm:rounded-lg flex justify-center flex-1">
         <div className="flex-1 bg-white-900 text-center hidden md:flex">
@@ -72,6 +76,8 @@ const RegistartionForm = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };
 export default RegistartionForm;
