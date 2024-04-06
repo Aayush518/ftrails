@@ -3,7 +3,7 @@ import ProfileCard from './profilecard';
 import Sidebar from './Sidebar';
 import Map from './map';
 
-const user_profile = () => {
+const UserProfile = () => {
   return (
     <div className="flex">
       {/* Sidebar */}
@@ -27,4 +27,4 @@ const user_profile = () => {
   );
 };
 
-export default user_profile;
+export default UserProfile;

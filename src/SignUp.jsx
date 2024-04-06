@@ -1,83 +1,90 @@
-import React from "react";
-import backgroundImg from "./assets/photos/1.jpg"; // Import the local image
+import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-const RegistartionForm = () => {
+import backgroundImg from "./assets/photos/1.jpg";
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+const SignUp = () => {
   return (
     <>
-    <Navbar />
-    <div className="h-[100vh] items-center flex justify-center px-5 lg:px-0">
-      <div className="max-w-screen-xl bg-white border shadow sm:rounded-lg flex justify-center flex-1">
-        <div className="flex-1 bg-white-900 text-center hidden md:flex">
+      <Navbar />
+      <div className="flex items-center justify-center h-screen w-full px-5 sm:px-0">
+        <div className="bg-white rounded-lg shadow-lg border overflow-hidden max-w-5xl w-full flex">
           <div
-            className="m-12 xl:m-16 w-full bg-cover bg-center bg-no-repeat"
+            className="hidden md:block md:w-1/2 lg:w-2/3 bg-cover bg-center"
             style={{
-              backgroundImage: `url(${backgroundImg})`, // Use the imported image
+              backgroundImage: `url(${backgroundImg})`,
             }}
           ></div>
-        </div>
-        <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
-          <div className=" flex flex-col items-center">
-            <div className="text-center">
-              <h1 className="text-2xl xl:text-4xl font-extrabold text-blue-900">
-                User Sign up
-              </h1>
-              <p className="text-[12px] text-gray-500">
-                Enter your details to create your account
-              </p>
+          <div className="w-full md:w-1/2 lg:w-1/3 p-8">
+            <h2 className="text-2xl font-bold text-gray-800 mb-4">Sign Up</h2>
+            <div className="mb-4">
+              <label htmlFor="name" className="block text-gray-700 font-medium mb-2">
+                Name
+              </label>
+              <input
+                id="name"
+                type="text"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
             </div>
-            <div className="w-full flex-1 mt-8">
-              <div className="mx-auto max-w-xs flex flex-col gap-4">
+            <div className="mb-4">
+              <label htmlFor="email" className="block text-gray-700 font-medium mb-2">
+                Email Address
+              </label>
+              <input
+                id="email"
+                type="email"
+                className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
+            </div>
+            <div className="mb-4">
+              <label htmlFor="password" className="block text-gray-700 font-medium mb-2">
+                Password
+              </label>
+              <div className="relative">
                 <input
-                  className="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                  type="text"
-                  placeholder="Enter your name"
-                />
-                <input
-                  className="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                  type="email"
-                  placeholder="Enter your email"
-                />
-                <input
-                  className="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
-                  type="tel"
-                  placeholder="Enter your phone"
-                />
-                <input
-                  className="w-full px-5 py-3 rounded-lg font-medium bg-gray-100 border border-gray-200 placeholder-gray-500 text-sm focus:outline-none focus:border-gray-400 focus:bg-white"
+                  id="password"
                   type="password"
-                  placeholder="Password"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                 />
-                <button className="mt-5 tracking-wide font-semibold bg-blue-900 text-gray-100 w-full py-4 rounded-lg hover:bg-indigo-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                  <svg
-                    className="w-6 h-6 -ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    strokeLinecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
-                    <circle cx="8.5" cy="7" r="4" />
-                    <path d="M20 8v6M23 11h-6" />
-                  </svg>
-                  <span className="ml-3">Sign Up</span>
-                </button>
-                <p className="mt-6 text-xs text-gray-600 text-center">
-                  Already have an account?{" "}
-                  <Link to="/login">
-                    <span className="text-blue-900 font-semibold">Sign in</span>
-                  </Link>
-                </p>
+                <Link
+                  to="/forgetpwd"
+                  className="absolute top-1/2 right-4 transform -translate-y-1/2 text-xs text-gray-500 hover:text-gray-900"
+                >
+                  Forget Password?
+                </Link>
               </div>
+            </div>
+            <button className="w-full bg-blue-700 text-white font-bold py-3 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              <Link to="/user_profile">Sign Up</Link>
+            </button>
+            <div className="mt-4 flex items-center justify-center">
+              <a
+                href="#"
+                className="flex items-center justify-center text-white bg-gray-800 hover:bg-gray-700 rounded-lg shadow-md py-3 px-4 w-full"
+              >
+                <div className="mr-2">
+                  <svg className="h-6 w-6" viewBox="0 0 40 40">
+                    {/* Google logo SVG */}
+                  </svg>
+                </div>
+                <span className="font-medium">Sign up with Google</span>
+              </a>
+            </div>
+            <div className="mt-4 text-center">
+              <Link to="/login" className="text-gray-500 hover:text-gray-700 text-sm">
+                Already have an account? <span className="text-blue-600">Sign In</span>
+              </Link>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    <Footer />
+      <Footer />
     </>
   );
 };
-export default RegistartionForm;
+
+export default SignUp;
